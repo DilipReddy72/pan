@@ -1,0 +1,45 @@
+.experience-section {
+    position: relative; /* Content appears above the animation */
+    padding: 50px 20px;
+    background-color: transparent; /* Transparent background to show animation */
+    color: white;
+    z-index: 1; /* Content layer above the animated background */
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    color: #e50914; /* Netflix red */
+    margin-bottom: 20px;
+  }
+  
+  .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .experience-card {
+    background-color: #1f1f1f; /* Darker card background for better contrast */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .experience-role {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #e50914; /* Highlight role */
+  }
+  
+  .experience-company,
+  .experience-duration {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
+  .experience-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  

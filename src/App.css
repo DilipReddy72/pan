@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: white;
+    overflow-x: hidden; /* Prevent horizontal scroll caused by animations */
+  }
+  
+  .app-container {
+    position: relative;
+    z-index: 0; /* Ensure background covers all sections */
+  }
+  
+  /* Animated Background */
+  .animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Place behind all content */
+    overflow: hidden;
+  }
+  
+  .icon {
+    position: absolute;
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.2); /* Subtle effect */
+    pointer-events: none; /* Prevent interaction */
+  }
+  
