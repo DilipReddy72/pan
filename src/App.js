@@ -9,75 +9,88 @@ import "./App.css";
 
 import { motion } from "framer-motion";
 import {
-    FaReact,
-    FaLinkedin,
-    FaEnvelope,
-    FaNodeJs,
-    FaPython,
-    FaDocker,
-    FaAws,
-    FaJava,
-    FaNetworkWired,
-    FaDatabase,
-    FaCode,
-    FaCloud,
-    FaLinux,
-    FaWindows,
-    FaGitAlt,
-    FaGithub,
-    FaHtml5,
-    FaCss3Alt,
-    FaJsSquare,
-    FaAngular,
-    FaBootstrap,
-    FaKubernetes,
-    FaGoogle,
-    FaApple,
-    FaSlack,
-    FaTrello,
-    FaJira,
-    FaBitbucket,
-    FaTable,
-    FaTerminal,
-    FaGlobe,
-    FaRocket,
-    FaLock,
-  } from "react-icons/fa";
+  FaReact,
+  FaNodeJs,
+  FaPython,
+  FaDocker,
+  FaAws,
+  FaJava,
+  FaNetworkWired,
+  FaDatabase,
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaAngular,
+  FaBootstrap,
+  FaGoogle,
+  FaApple,
+  FaSlack,
+  FaTrello,
+  FaJira,
+  FaBitbucket,
+  FaRocket,
+  FaLock,
+  FaFigma,
+  FaPhp,
+  FaCode,
+} from "react-icons/fa";
+import {
+  SiVueDotJs,
+  SiNextDotJs,
+  SiExpress,
+  SiPostgresql,
+  SiMongodb,
+  SiRedis,
+  SiOracle,
+  SiTensorflow,
+  SiPandas,
+  SiNumpy,
+  SiTerraform,
+  SiKubernetes,
+  SiRuby,
+  SiNotion,
+} from "react-icons/si";
 
-
-  const techIcons = [
-    { icon: <FaReact />, id: "react" }, // React
-    { icon: <FaNodeJs />, id: "node" }, // Node.js
-    { icon: <FaPython />, id: "python" }, // Python
-    { icon: <FaDocker />, id: "docker" }, // Docker
-    { icon: <FaAws />, id: "aws" }, // AWS
-    { icon: <FaJava />, id: "java" }, // Java
-    { icon: <FaNetworkWired />, id: "network" }, // Network
-    { icon: <FaDatabase />, id: "database" }, // Database
-    { icon: <FaCode />, id: "code" }, // Code
-    { icon: <FaCloud />, id: "cloud" }, // Cloud
-    { icon: <FaLinux />, id: "linux" }, // Linux
-    { icon: <FaWindows />, id: "windows" }, // Windows
-    { icon: <FaGitAlt />, id: "git" }, // Git
-    { icon: <FaGithub />, id: "github" }, // GitHub
-    { icon: <FaHtml5 />, id: "html" }, // HTML5
-    { icon: <FaCss3Alt />, id: "css" }, // CSS3
-    { icon: <FaJsSquare />, id: "javascript" }, // JavaScript
-    { icon: <FaAngular />, id: "angular" }, // Angular
-    { icon: <FaBootstrap />, id: "bootstrap" }, // Bootstrap
+const techIcons = [
+  { icon: <FaReact />, id: "react" },
+  { icon: <FaNodeJs />, id: "node" },
+  { icon: <FaPython />, id: "python" },
+  { icon: <FaDocker />, id: "docker" },
+  { icon: <FaAws />, id: "aws" },
+  { icon: <FaJava />, id: "java" },
+  { icon: <FaNetworkWired />, id: "network" },
+  { icon: <FaDatabase />, id: "database" },
+  { icon: <FaHtml5 />, id: "html" },
+  { icon: <FaCss3Alt />, id: "css" },
+  { icon: <FaJsSquare />, id: "javascript" },
+  { icon: <FaAngular />, id: "angular" },
+  { icon: <FaBootstrap />, id: "bootstrap" },
+  { icon: <FaGoogle />, id: "gcp" },
+  { icon: <FaApple />, id: "apple" },
+  { icon: <FaSlack />, id: "slack" },
+  { icon: <FaTrello />, id: "trello" },
+  { icon: <FaJira />, id: "jira" },
+  { icon: <FaBitbucket />, id: "bitbucket" },
+  { icon: <FaRocket />, id: "devops" },
+  { icon: <FaLock />, id: "security" },
+ 
   
-    { icon: <FaGoogle />, id: "gcp" }, // Google Cloud Platform
-    { icon: <FaApple />, id: "apple" }, // macOS or Apple Technologies
-    { icon: <FaSlack />, id: "slack" }, // Slack
-    { icon: <FaTrello />, id: "trello" }, // Trello
-    { icon: <FaJira />, id: "jira" }, // Jira
-    { icon: <FaBitbucket />, id: "bitbucket" }, // Bitbucket
-    { icon: <FaTable />, id: "databases" }, // General Database
-    { icon: <FaTerminal />, id: "terminal" }, // Terminal
-    { icon: <FaGlobe />, id: "web" }, // Web Technologies
-    { icon: <FaRocket />, id: "devops" }, // DevOps
-    { icon: <FaLock />, id: "security" }, // Security
-  ];
+  { icon: <SiExpress />, id: "express" },
+  { icon: <SiPostgresql />, id: "postgresql" },
+  { icon: <SiMongodb />, id: "mongodb" },
+  { icon: <SiRedis />, id: "redis" },
+  { icon: <SiOracle />, id: "oracle" },
+  { icon: <SiTensorflow />, id: "tensorflow" },
+  { icon: <SiPandas />, id: "pandas" },
+  { icon: <SiNumpy />, id: "numpy" },
+  { icon: <SiTerraform />, id: "terraform" },
+  { icon: <SiKubernetes />, id: "kubernetes" },
+  { icon: <FaFigma />, id: "figma" },
+  { icon: <SiRuby />, id: "ruby" },
+  { icon: <SiNotion />, id: "notion" },
+  { icon: <FaPhp />, id: "php" },
+];
+
 function App() {
   return (
     <div className="app-container">

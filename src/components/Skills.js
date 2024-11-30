@@ -1,4 +1,3 @@
-// src/components/Skills.js
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -60,13 +59,12 @@ const skillCategories = [
   {
     title: "Frameworks and Libraries",
     skills: [
-     
       { name: "Pandas", icon: <SiPandas /> },
       { name: "NumPy", icon: <SiNumpy /> },
       { name: "Keras", icon: <SiKeras /> },
       { name: "Scikit-Learn", icon: <SiScikitlearn /> },
       { name: "TensorFlow", icon: <SiTensorflow /> },
-      { name: "Jupyter Notebook", icon: <SiJupyter /> }
+      { name: "Jupyter Notebook", icon: <SiJupyter /> },
     ],
   },
   {
@@ -126,7 +124,6 @@ const skillCategories = [
       { name: "iOS", icon: <FaApple /> },
     ],
   },
-  // Add other categories as needed
 ];
 
 const Skills = () => {
@@ -136,13 +133,16 @@ const Skills = () => {
     setActiveCategory(category);
   };
 
-  const closeModal = () => {
-    setActiveCategory(null);
+  const closeModal = (e) => {
+    // Ensure button or overlay click closes modal
+    if (e.target.classList.contains("modal-overlay") || e.target.classList.contains("close-button")) {
+      setActiveCategory(null);
+    }
   };
 
   return (
     <div className="skills-container">
-      <h2 className="skills-title">My Genres</h2>
+      <h2 className="skills-title">Core Competencies</h2>
       <div className="skills-grid">
         {skillCategories.map((category, index) => (
           <motion.div
@@ -151,11 +151,8 @@ const Skills = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-           <h3 className="skill-block-title">{category.title}</h3>
-            <p
-              className="view-link"
-              onClick={() => openModal(category)}
-            >
+            <h3 className="skill-block-title">{category.title}</h3>
+            <p className="view-link" onClick={() => openModal(category)}>
               View
             </p>
           </motion.div>
@@ -168,6 +165,7 @@ const Skills = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
+          onClick={closeModal} // Close modal when clicking on overlay
         >
           <motion.div
             className="modal-content"
@@ -195,6 +193,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
-
-

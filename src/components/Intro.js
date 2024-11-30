@@ -5,10 +5,11 @@ import {
 
   FaLinkedin,
   FaEnvelope,
+  FaGithub,
 
 } from "react-icons/fa";
 import "./Intro.css";
-import profilePic from "/Users/dilipreddyseelam/Desktop/mine/netflix-portfolio/src/images/profile.jpeg";
+import profilePic from "/Users/dilipreddyseelam/Desktop/mine/netflix-portfolio/src/images/profile.png";
 
 
 
@@ -49,6 +50,14 @@ const Intro = () => {
           >
             <FaLinkedin /> LinkedIn
           </a>
+          <a
+    href="https://github.com/DilipReddy72" // Replace with your GitHub URL
+    target="_blank"
+    rel="noopener noreferrer"
+    className="contact-link"
+  >
+    <FaGithub /> GitHub
+  </a>
           <a
             href="mailto:diliprscr72@gmail.com"
             className="contact-link"

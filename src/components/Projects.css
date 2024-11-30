@@ -1,34 +1,72 @@
-/* src/components/Projects.css */
-.projects-section {
-  position: relative; /* Ensure content appears above animation */
-  padding: 20px;
-  background-color: #141414;
+.projects-container {
+  position: relative; /* Content above the animated background */
+  padding: 3.125rem 1.25rem; /* 50px 20px */
+  background-color: transparent; /* Transparent to allow animation to show */
   color: white;
-  z-index: 1; /* Layer content above the background */
+  z-index: 1;
   text-align: center;
 }
 
-  
-  .projects-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
+.projects-title {
+  font-size: 2.5rem; /* 40px */
+  margin-bottom: 1.875rem; /* 30px */
+  color: #e50914; /* Netflix red */
+  text-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.7); /* 2px 2px 5px */
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); /* 300px */
+  gap: 1.25rem; /* 20px */
+}
+
+.project-card {
+  background: rgba(31, 31, 31, 0.9); /* Semi-transparent background for depth */
+  border-radius: 0.625rem; /* 10px */
+  padding: 1.25rem; /* 20px */
+  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.5); /* 0 4px 15px */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+  cursor: pointer;
+  text-align: center; /* Ensure the text is centered */
+}
+
+.project-card:hover {
+  transform: translateY(-0.625rem); /* -10px */
+  background-color: rgba(20, 20, 20, 0.9); /* Highlighted background on hover */
+}
+
+.project-card h3 {
+  font-size: 1.5rem; /* 24px */
+  margin-bottom: 0.625rem; /* 10px */
+  color: #e50914; /* Netflix red for titles */
+  text-shadow: 0.0625rem 0.0625rem 0.1875rem rgba(0, 0, 0, 0.5); /* 1px 1px 3px */
+}
+
+.project-card p {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8); /* Slightly dimmed text for better readability */
+}
+
+.project-card:hover p {
+  color: white; /* Highlight text on hover */
+}
+
+/* Add responsive design */
+@media (max-width: 48rem) { /* 768px */
   .projects-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr)); /* 250px */
   }
-  
+
   .project-card {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 0.9375rem; /* 15px */
   }
-  
+
+  .project-card h3 {
+    font-size: 1.2rem; /* 19.2px */
+  }
+
+  .project-card p {
+    font-size: 0.9rem; /* 14.4px */
+  }
+}
