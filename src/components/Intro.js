@@ -9,7 +9,7 @@ import {
 
 } from "react-icons/fa";
 import "./Intro.css";
-import profilePic from "/Users/dilipreddyseelam/Desktop/mine/netflix-portfolio/src/assets/images/profile.jpeg";
+import profilePic from "netflix-portfolio/src/assets/images/profile.jpeg";
 
 
 
