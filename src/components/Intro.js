@@ -9,7 +9,7 @@ import {
 
 } from "react-icons/fa";
 import "./Intro.css";
-import profilePic from "./assets/images/profile.png";
+import profilePic from "../assets/images/profile.png";
 
 
 
