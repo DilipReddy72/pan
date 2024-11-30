@@ -16,6 +16,7 @@ import profilePic from "../assets/images/profile.jpeg";
 
 
 
+
 const Intro = () => {
   return (
     <div className="intro-container">
