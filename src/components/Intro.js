@@ -1,6 +1,6 @@
 // src/components/Intro.js
 import React,{ useState } from "react";
-import "./intro.css";
+import "/Users/dilipreddyseelam/Desktop/presnet/Portfolio/src/components/intro.css";
 
 const Intro = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
